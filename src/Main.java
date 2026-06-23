@@ -1,5 +1,6 @@
 import modelo.Paciente;
 import modelo.Profissional;
+import modelo.enuns.Status;
 
 import java.time.LocalDate;
 
@@ -24,5 +25,8 @@ public class Main {
         for (Profissional profissional : profissionais) {
             System.out.println(profissional);
         }
+
+        Status status = Status.REALIZADA;
+        System.out.println(status);
     }
 }
