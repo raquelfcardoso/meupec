@@ -1,8 +1,10 @@
+import modelo.Consulta;
 import modelo.Paciente;
 import modelo.Profissional;
 import modelo.enuns.Status;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class Main {
@@ -26,7 +28,11 @@ public class Main {
             System.out.println(profissional);
         }
 
-        Status status = Status.REALIZADA;
-        System.out.println(status);
+        Consulta consulta = new Consulta(
+                paciente, profissionais[1],
+                LocalDateTime.of(2026, 7, 30, 11, 0)
+        );
+        System.out.println("===Mostrando Consulta===");
+        System.out.println(consulta);
     }
 }
